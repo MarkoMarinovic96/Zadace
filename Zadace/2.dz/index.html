@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+      <form class="forma1">
+        <div>
+          <h2>AUTO 1</h2>
+          <br />
+          <label for="nadimak1">Nadimak</label><br />
+          <input type="text" id="nadimak1" name="nadimak1" /><br />
+          <label for="boja1">Boja</label><br />
+          <select name="boja1" id="boja1">
+            <option value="crvena">Crvena</option>
+            <option value="crna">Crna</option>
+          </select><br> 
+          <label for="brzina1">Brzina</label><br />
+          <input type="number" id="brzina1" name="brzina1" /><br />
+        </div>
+        <div>
+          <h2>AUTO 2</h2>
+          <br />
+          <label for="nadimak2">Nadimak</label><br />
+          <input type="text" id="nadimak2" name="nadimak2" /><br />
+          <label for="boja2">Boja</label><br />
+          <select name="boja2" id="boja2">
+            <option value="zuta">Žuta</option>
+            <option value="plava">Plava</option>
+          </select><br> 
+          <label for="brzina2">Brzina</label><br />
+          <input type="number" id="brzina2" name="brzina2" /><br />
+        </div>
+        <div class="sredina">
+        <label for="daljina">Unesite daljinu:</label>
+        <input type="number" id="daljina" name="daljina"><br>
+        <input type="submit" value="UTRKA" onclick="utrka(event)">
+      </div>
+      </form>
+      <div>
+        <p id="prikaz"></p>
+      </div>
+      <div>
+        <div></div>
+        <div></div>
+      </div>
+  </body>
+</html>
