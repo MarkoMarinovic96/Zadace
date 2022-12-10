@@ -42,7 +42,10 @@ function utrka(event) {
     } km/h,prijeđena duljina je ${daljina}metara te je prešao u vremenu od ${vrijeme2.toFixed(
       2
     )}sec`;
-  } else {
+  }else if (vrijeme1 == vrijeme2){
+    document.getElementById("prikaz").innerHTML=`Oba su pobjednici`
+  }
+   else {
     document.getElementById(
       "prikaz"
     ).innerHTML = `Pobjednik je auto sa nadimkom ${
@@ -53,4 +56,22 @@ function utrka(event) {
       2
     )}sec`;
   }
+  //Moguči slučajevi
+ if(auto1.nadimak == "" || auto2.nadimak2 == "" ){
+  document.getElementById("prikaz").innerHTML=`Unesite nadimak ispravno`
+ }
+ //Slučajevi za brzinu
+ if (auto1.brzina <0 || auto2.brzina2 <0){
+  document.getElementById("prikaz").innerHTML=`Ne prihvaca se negativna brzina`
+ }else if (auto1.brzina ==undefined || auto2.brzina2 ==undefined){
+  document.getElementById("prikaz").innerHTML=`Popunite polje Brzina sa iznosom većim od 0`
+ }else if (auto1.brzina ==0 || auto2.brzina2 ==0){
+  document.getElementById("prikaz").innerHTML=`Auto stoji na mjestu`
+ }
+ //Slučajevi za daljinu
+ if (daljina<0){
+  document.getElementById("prikaz").innerHTML=`Maknite - u daljini`
+ }else if(daljina==undefined){
+  document.getElementById("prikaz").innerHTML=`Unesite daljinu`
+ }
 }
